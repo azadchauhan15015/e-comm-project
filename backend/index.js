@@ -111,7 +111,9 @@ app.post("/addproduct", async (req, res) => {
     })
 })
 
-// api for remove product in database
+// api for remove product in database 
+
+//hejxj
 
 app.post("/removeproduct", async (req, res) => {
     await Product.findOneAndDelete({ id: req.body.id })
