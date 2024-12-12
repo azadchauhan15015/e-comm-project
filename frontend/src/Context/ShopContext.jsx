@@ -18,7 +18,8 @@ const ShopContextProvider = (props) => {
 
 
   useEffect(() => {
-    fetch("http://localhost:4000/allproducts")
+    fetch("http://e-comm-project-iota.vercel.app
+/allproducts")
       .then((res) => res.json()).then((data) => setAllProduct(data))
 
 
@@ -44,7 +45,8 @@ const ShopContextProvider = (props) => {
     setCartItems((pre) => ({ ...pre, [itemId]: pre[itemId] + 1 }));
 
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/addtocart", {
+      fetch("http://e-comm-project-iota.vercel.app
+/addtocart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -61,7 +63,8 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((pre) => ({ ...pre, [itemId]: pre[itemId] - 1 }))
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/removefromcart", {
+      fetch("http://e-comm-project-iota.vercel.app
+/removefromcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
